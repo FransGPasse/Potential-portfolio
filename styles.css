@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+#right-eyelid {
+  animation: eyelid 18s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+#left-eyelid {
+  animation: eyelid 18s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+#left-eye {
+  animation: eyes 18s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+#right-eye {
+  animation: eyes 18s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes eyelid {
+  0%,
+  40.5% {
+    opacity: 0;
+  }
+
+  40.6%,
+  41.5% {
+    opacity: 1;
+  }
+
+  41.6%,
+  42.3% {
+    opacity: 0;
+  }
+
+  42.4%,
+  43.9% {
+    opacity: 1;
+  }
+
+  44%,
+  89.4% {
+    opacity: 0;
+  }
+
+  89.5%,
+  90.9% {
+    opacity: 1;
+  }
+
+  91%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes eyes {
+  0%,
+  40.5% {
+    opacity: 1;
+  }
+
+  40.6%,
+  41.5% {
+    opacity: 0;
+  }
+
+  41.6%,
+  42.3% {
+    opacity: 1;
+  }
+
+  42.4%,
+  43.9% {
+    opacity: 0;
+  }
+
+  44%,
+  89.4% {
+    opacity: 1;
+  }
+
+  89.5%,
+  90.9% {
+    opacity: 0;
+  }
+
+  91%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/* #mouth {
+  animation: grin 5s linear infinite;
+  animation-direction: alternate;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes grin {
+  0%, 70% {
+    transform: scaleX(1);
+  }
+  71%, 75% {
+    transform: scaleX(1.2);
+  }
+
+  76%, 100% {
+    transform: scaleX(1);
+  }
+} 
+  #hair {
+  animation: bobbing 1s ease infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-direction: alternate;
+}
+
+@keyframes bobbing {
+  from {
+    transform: translateY(0rem);
+  }
+  to {
+    transform: translateY(-1rem);
+  }
+} */
