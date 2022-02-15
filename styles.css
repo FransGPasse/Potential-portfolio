@@ -1,20 +1,55 @@
+/* CSS reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-#svg-wrapper {
+/* Wrapper styles */
+#logo-wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+
+  position: relative;
+  height: 20vh;
 }
 
+
+/* Circular text styles */
+#circle {
+  position: absolute;
+
+  color: black;
+  font-size: 1.9rem;
+  font-family: "cousine", monospace;
+
+  letter-spacing: 14px;
+  margin-top: 40px;
+
+  animation: spin 28s linear infinite;
+}
+
+/* Text animation */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+svg {
+  max-height: 75%;
+  margin-top: 100px;
+  margin-right: 10px;
+}
+
+
+
+/* Helper classes */
 .hide {
   display: none;
 }
 
+/* SVG component styles */
 #right-eyelid {
   animation: eyelid 18s ease-in-out infinite;
   animation-direction: alternate;
@@ -35,6 +70,7 @@
   animation-direction: alternate;
 }
 
+/* Logo animation */
 @keyframes eyelid {
   0%,
   40.5% {
