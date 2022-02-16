@@ -12,6 +12,11 @@ body {
     rgba(255, 190, 155, 1) 0%,
     rgb(160, 101, 255) 100%
   );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow: hidden;
 }
 
 /* Wrapper styles */
@@ -20,7 +25,7 @@ body {
   justify-content: center;
 
   position: relative;
-  height: 100vh;
+  height: 20vh;
 }
 
 /* Circular text styles */
@@ -31,7 +36,7 @@ body {
   font-family: "cousine", monospace;
   letter-spacing: 14px;
   font-size: 1.9rem;
-  
+
   margin-top: 40px;
 
   animation: spin 28s linear infinite;
@@ -45,8 +50,8 @@ body {
 }
 
 svg {
-  max-height: 15%;
-  margin-top: 100px;
+  max-height: 140px;
+  margin-top: 110px;
   margin-right: 10px;
 }
 
