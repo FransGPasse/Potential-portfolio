@@ -5,9 +5,13 @@
   box-sizing: border-box;
 }
 
-body { 
-  background: rgb(255,190,155);
-  background: linear-gradient(38deg, rgba(255,190,155,1) 0%, rgb(160, 101, 255) 100%);
+body {
+  background: rgb(255, 190, 155);
+  background: linear-gradient(
+    38deg,
+    rgba(255, 190, 155, 1) 0%,
+    rgb(160, 101, 255) 100%
+  );
 }
 
 /* Wrapper styles */
@@ -19,16 +23,15 @@ body {
   height: 100vh;
 }
 
-
 /* Circular text styles */
 #circle {
   position: absolute;
 
   color: black;
-  font-size: 1.9rem;
   font-family: "cousine", monospace;
-
   letter-spacing: 14px;
+  font-size: 1.9rem;
+  
   margin-top: 40px;
 
   animation: spin 28s linear infinite;
@@ -46,8 +49,6 @@ svg {
   margin-top: 100px;
   margin-right: 10px;
 }
-
-
 
 /* Helper classes */
 .hide {
