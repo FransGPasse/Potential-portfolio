@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+
+/* Body styles */
 body {
   background: rgb(255, 190, 155);
   background: linear-gradient(
@@ -19,13 +21,28 @@ body {
   overflow: hidden;
 }
 
+
+/* Hamburger menu styles */
+.hamburger-wrapper {
+  position: absolute;
+  
+}
+
+.hamburger__span {
+  display: block;
+  width: 100px;
+  height: 100%;
+  color: black;
+  border-radius: 25px;
+}
+
 /* Wrapper styles */
 #logo-wrapper {
   display: flex;
   justify-content: center;
 
   position: relative;
-  height: 20vh;
+  height: 10vh;
 }
 
 /* Circular text styles */
