@@ -5,13 +5,18 @@
   box-sizing: border-box;
 }
 
+body { 
+  background: rgb(255,190,155);
+  background: linear-gradient(38deg, rgba(255,190,155,1) 0%, rgb(160, 101, 255) 100%);
+}
+
 /* Wrapper styles */
 #logo-wrapper {
   display: flex;
   justify-content: center;
 
   position: relative;
-  height: 20vh;
+  height: 100vh;
 }
 
 
@@ -37,7 +42,7 @@
 }
 
 svg {
-  max-height: 75%;
+  max-height: 15%;
   margin-top: 100px;
   margin-right: 10px;
 }
