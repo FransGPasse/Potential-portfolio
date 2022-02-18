@@ -1,80 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,400;1,500&display=swap');
+
 /* CSS reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+/*   outline: 1px solid black; */
 
-
-/* Body styles */
-body {
-  background: rgb(255, 190, 155);
-  background: linear-gradient(
-    200deg,
-    rgba(255, 190, 155, 1) 0%,
+  --background-clr: linear-gradient(
+    220deg,
+    rgb(255, 148, 90) 0%,
     rgb(160, 101, 255) 100%
   );
+  --secondary-clr: black;
+}
+
+/* Helper classes */
+.hidden {
+  display: none;
+}
+
+/* Section styles */
+body {
+  background: var(--background-clr);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
 }
 
+footer {
+  position: sticky;
+  top: 100vh;
+  margin-bottom: 15px;
+
+  display: grid;
+  place-content: center;
+}
 
 /* Hamburger menu styles */
-.hamburger-wrapper {
-  position: absolute;
-  
+.hamburger-menu {
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  top: 50px;
+  right: 50px;
 }
 
-.hamburger__span {
+.hamburger-menu__span {
   display: block;
-  width: 100px;
-  height: 100%;
-  color: black;
+  
+  width: 50px;
+  height: 4px;
+  background-color: var(--secondary-clr);
   border-radius: 25px;
+
+  margin: 4px 0px;
 }
 
 /* Wrapper styles */
 #logo-wrapper {
+  position: relative;
+
   display: flex;
   justify-content: center;
-
-  position: relative;
-  height: 10vh;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Circular text styles */
-#circle {
+#circle-text {
+  margin-top: 10px;
+
+  color: var(--secondary-clr);
+  font-family: "Cousine", monospace;
+  letter-spacing: 11px;
+  font-size: 1.6rem;
+
+  animation: spin 35s linear infinite;
+}
+
+/* Complete SVG styles */
+#logo {
   position: absolute;
-
-  color: black;
-  font-family: "cousine", monospace;
-  letter-spacing: 14px;
-  font-size: 1.9rem;
-
-  margin-top: 40px;
-
-  animation: spin 28s linear infinite;
+  height: 120px;
+  margin-right: 5px;
 }
 
-/* Text animation */
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
+#introduction {
+  margin: 60px;
+  text-align: center;
+  font-size: 1.8rem;
 }
 
-svg {
-  max-height: 140px;
-  margin-top: 110px;
-  margin-right: 10px;
+.text-link {
+  font-size: 1.4rem;
+  color: var(--secondary-clr);
 }
 
-/* Helper classes */
-.hide {
-  display: none;
+.text-link:hover {
+  transform: scaleX(2);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-clr);
+}
+
+#email-link {
+  color: var(--secondary-clr);
+  text-decoration: none;
+}
+
+ion-icon {
+  font-size: 32px;
+  color: var(--secondary-clr);
 }
 
 /* SVG component styles */
@@ -98,7 +147,13 @@ svg {
   animation-direction: alternate;
 }
 
-/* Logo animation */
+/* Animation styles */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes eyelid {
   0%,
   40.5% {
@@ -172,38 +227,3 @@ svg {
     opacity: 1;
   }
 }
-
-/* #mouth {
-  animation: grin 5s linear infinite;
-  animation-direction: alternate;
-  transform-origin: right;
-  transform-box: fill-box;
-}
-
-@keyframes grin {
-  0%, 70% {
-    transform: scaleX(1);
-  }
-  71%, 75% {
-    transform: scaleX(1.2);
-  }
-
-  76%, 100% {
-    transform: scaleX(1);
-  }
-} 
-  #hair {
-  animation: bobbing 1s ease infinite;
-  transform-origin: center;
-  transform-box: fill-box;
-  animation-direction: alternate;
-}
-
-@keyframes bobbing {
-  from {
-    transform: translateY(0rem);
-  }
-  to {
-    transform: translateY(-1rem);
-  }
-} */

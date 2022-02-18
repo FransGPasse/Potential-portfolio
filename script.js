@@ -1,2 +1,1 @@
-let circ = new CircleType(document.getElementById("circle"));
-circ.raduis(360);
+let circ = new CircleType(document.getElementById("circle-text"));
