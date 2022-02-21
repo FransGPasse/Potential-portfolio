@@ -7,7 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-/*   outline: 0.5px solid black; */
+  /*   outline: 0.5px solid black; */
 
   --background-clr: linear-gradient(
     220deg,
@@ -17,11 +17,6 @@
   --secondary-clr: black;
   --font-main: "Poppins", sans-serif;
   --font-mono: "cousine", monospace;
-}
-
-/* Helper classes */
-.hidden {
-  display: none;
 }
 
 /* Section styles */
@@ -39,9 +34,12 @@ footer {
 
 footer {
   position: sticky;
-  top: 100vh;
+
   display: grid;
   place-content: center;
+
+  top: 100vh;
+  margin-bottom: 15px;
 }
 
 .landing-page-wrapper {
@@ -54,15 +52,17 @@ footer {
 /* Hamburger menu styles */
 .hamburger-menu {
   position: fixed;
-  z-index: 999;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  top: 50px;
-  right: 50px;
+  top: 45px;
+  right: 45px;
+
+  padding: 0.5em;
 }
 
 .hamburger-menu:hover {
@@ -80,7 +80,56 @@ footer {
   margin: 4px 0px;
 }
 
-/* Wrapper styles */
+/* Navbar styles */
+.navbar-wrapper {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 60vw;
+
+  background-color: rgb(252, 176, 33);
+  font-size: 2.5rem;
+
+  transform: translateX(100%);
+
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.nav-open .navbar-wrapper {
+  transform: translateX(0%);
+}
+
+.menu__link {
+  text-decoration: none;
+  color: var(--secondary-clr);
+  font-family: var(--font-main);
+  margin-block: 0.5em;
+
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.menu__link:hover {
+  color: rgb(53, 209, 211);
+}
+
+/* Logo styles */
 #logo-wrapper {
   position: relative;
 
@@ -90,7 +139,6 @@ footer {
   flex-direction: column;
 }
 
-/* Circular text styles */
 #circle-text {
   margin-top: 10px;
 
@@ -103,12 +151,12 @@ footer {
   animation: spin 35s linear infinite;
 }
 
-/* Complete SVG styles */
 #logo {
   position: absolute;
   height: 120px;
   margin-right: 5px;
 }
+
 
 #introduction {
   display: flex;
@@ -134,7 +182,7 @@ footer {
   text-decoration: none;
 }
 
-/* Pröva KP's pseudo-element där underlinen blir fetare nedåt? */
+
 .text-link::after {
   content: "";
 
@@ -149,7 +197,7 @@ footer {
 
   background-color: darkorange;
   transform-origin: bottom center;
-  transition: cubic-bezier(0.74, 0.26, 0.56, 1.32) 200ms;
+  transition: cubic-bezier(0.79, 0.1, 0.55, 1.28) 175ms;
 }
 
 .text-link:hover::after,
@@ -165,14 +213,38 @@ footer {
   color: var(--secondary-clr);
 }
 
+ion-icon {
+  font-size: 32px;
+  color: var(--secondary-clr);
+  margin-inline: 5px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+#github:hover {
+  color: white;
+}
+#linkedin:hover {
+  color: #0072b1;
+}
+
+#instagram:hover {
+  color: rgb(153, 0, 255);
+}
+#twitter:hover {
+  color: #00acee;
+}
+
 #email-link {
   color: var(--secondary-clr);
   text-decoration: none;
 }
 
-ion-icon {
-  font-size: 32px;
-  color: var(--secondary-clr);
+#email-link:hover {
+  text-decoration: underline;
 }
 
 /* SVG component styles */
@@ -275,7 +347,4 @@ ion-icon {
   100% {
     opacity: 1;
   }
-}
-
-.nav-open {
 }
