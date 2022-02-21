@@ -7,7 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /*     outline: 1px solid black; */
+/*   outline: 0.5px solid black; */
 
   --background-clr: linear-gradient(
     220deg,
@@ -32,10 +32,6 @@ body {
   background-attachment: fixed;
 }
 
-main {
-  min-height: 100%;
-}
-
 main,
 footer {
   font-family: var(--font-main);
@@ -46,6 +42,13 @@ footer {
   top: 100vh;
   display: grid;
   place-content: center;
+}
+
+.landing-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 /* Hamburger menu styles */
@@ -111,10 +114,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   text-align: center;
   font-size: 1.8rem;
+
+  margin-inline: 50px;
+  margin-bottom: 20vh;
+  margin-top: 5vh;
 }
 
 #introduction > * {
@@ -143,12 +149,12 @@ footer {
 
   background-color: darkorange;
   transform-origin: bottom center;
-  transition: cubic-bezier(.74,.26,.56,1.32) 200ms;
+  transition: cubic-bezier(0.74, 0.26, 0.56, 1.32) 200ms;
 }
 
 .text-link:hover::after,
 .text-link:focus::after {
-  transform: scale(1.2, 3);
+  transform: scaleY(3);
 }
 
 .socials {
@@ -269,4 +275,7 @@ ion-icon {
   100% {
     opacity: 1;
   }
+}
+
+.nav-open {
 }
