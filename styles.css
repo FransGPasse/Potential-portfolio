@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,400;1,500&display=swap");
 
-/* CSS reset */
+/* !CSS reset */
 *,
 ::after,
 ::before {
@@ -17,14 +17,18 @@
   --secondary-clr: black;
   --font-main: "Poppins", sans-serif;
   --font-mono: "cousine", monospace;
+
+  scroll-behavior: smooth;
 }
 
-/* Section styles */
+/* !Section styles */
 body {
   background: var(--background-clr);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  color: var(--secondary-clr);
 }
 
 main,
@@ -49,7 +53,7 @@ footer {
   height: 100vh;
 }
 
-/* Hamburger menu styles */
+/* !Hamburger menu styles */
 .hamburger-menu {
   position: fixed;
   z-index: 2;
@@ -78,9 +82,35 @@ footer {
   border-radius: 25px;
 
   margin: 4px 0px;
+
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
-/* Navbar styles */
+.nav-open #hamburger-menu__span--1 {
+  transform: rotate(35deg);
+  width: 65%;
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.nav-open #hamburger-menu__span--2 {
+  transform: translateX(-18%);
+  background-color: white;
+}
+
+.nav-open #hamburger-menu__span--3 {
+  transform: rotate(-35deg);
+  transform-origin: center;
+  width: 65%;
+  background-color: white;
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+
+/* !!Navbar styles */
 .navbar-wrapper {
   position: fixed;
   top: 0px;
@@ -88,16 +118,10 @@ footer {
 
   z-index: 1;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
   height: 100%;
   width: 60vw;
 
-  background-color: rgb(252, 176, 33);
-  font-size: 2.5rem;
+  background: rgb(19, 19, 54);
 
   transform: translateX(100%);
 
@@ -112,11 +136,21 @@ footer {
   transform: translateX(0%);
 }
 
+.navbar-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 150px;
+}
+
 .menu__link {
-  text-decoration: none;
-  color: var(--secondary-clr);
   font-family: var(--font-main);
-  margin-block: 0.5em;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+
+  margin-bottom: 60px;
 
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
@@ -126,10 +160,10 @@ footer {
 }
 
 .menu__link:hover {
-  color: rgb(53, 209, 211);
+  color: darkorange;
 }
 
-/* Logo styles */
+/* !Logo styles */
 #logo-wrapper {
   position: relative;
 
@@ -158,6 +192,7 @@ footer {
 }
 
 
+/* !Landing page main content styles */
 #introduction {
   display: flex;
   flex-direction: column;
@@ -169,6 +204,8 @@ footer {
   margin-inline: 50px;
   margin-bottom: 20vh;
   margin-top: 5vh;
+
+  position: relative;
 }
 
 #introduction > * {
@@ -182,14 +219,13 @@ footer {
   text-decoration: none;
 }
 
-
 .text-link::after {
   content: "";
 
   position: absolute;
   z-index: -1;
 
-  height: 30%;
+  height: 45%;
   width: 100%;
 
   bottom: 3px;
@@ -197,14 +233,16 @@ footer {
 
   background-color: darkorange;
   transform-origin: bottom center;
-  transition: cubic-bezier(0.79, 0.1, 0.55, 1.28) 175ms;
+  transition: cubic-bezier(0.79, 0.1, 0.55, 1.28) 125ms;
 }
 
 .text-link:hover::after,
 .text-link:focus::after {
-  transform: scaleY(3);
+  transform: scaleY(0.20);
 }
 
+
+/* !Landing page footer styles */
 .socials {
   display: flex;
   align-items: center;
@@ -247,7 +285,7 @@ ion-icon {
   text-decoration: underline;
 }
 
-/* SVG component styles */
+/* !SVG component styles */
 #right-eyelid {
   animation: eyelid 18s ease-in-out infinite;
   animation-direction: alternate;
@@ -268,7 +306,7 @@ ion-icon {
   animation-direction: alternate;
 }
 
-/* Animation styles */
+/* !Animation styles */
 @keyframes spin {
   100% {
     transform: rotate(360deg);
